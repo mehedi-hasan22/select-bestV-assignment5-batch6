@@ -17,3 +17,15 @@ function addToCart(element) {
     cartContainer.appendChild(li);
 }
 
+
+function calculation() {
+
+    const perHeadInputString = document.getElementById('per-head-budget').value;
+
+    const perHeadInput = parseFloat(perHeadInputString);
+
+    const total = cart.length * perHeadInput;
+
+    const TotalPlayerExpenses = document.getElementById('player-expense').innerText = total;
+    alert(perHeadInput);
+}

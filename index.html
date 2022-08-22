@@ -31,7 +31,8 @@
                                         <img class="img-fluid" src="./images/benzu.jpg" alt="">
                                         <p>54 Goals || 92 Assist</p>
                                         <h5>Karim Benzema</h5>
-                                        <button class="btn btn-primary px-5 mb-3 ">Select</button>
+                                        <button class="btn btn-primary px-5 mb-3"
+                                            onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -39,7 +40,8 @@
                                         <img class="img-fluid" src="./images/cr7.jpg" alt="">
                                         <p>72 Goals || 112 Assist</p>
                                         <h5>Cristiano Ronaldo</h5>
-                                        <button class="btn btn-primary px-5 mb-3 ">Select</button>
+                                        <button class="btn btn-primary px-5 mb-3"
+                                            onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -47,7 +49,8 @@
                                         <img class="img-fluid" src="./images/david.jpg" alt="">
                                         <p>82 Goals || 100 Assist</p>
                                         <h5>David Beckham</h5>
-                                        <button class="btn btn-primary px-5 mb-3 ">Select</button>
+                                        <button class="btn btn-primary px-5 mb-3"
+                                            onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -55,7 +58,8 @@
                                         <img class="img-fluid" src="./images/mbappe.jpeg" alt="">
                                         <p>32 Goals || 82 Assist</p>
                                         <h5>Kylian Mbappé</h5>
-                                        <button class="btn btn-primary px-5 mb-3 ">Select</button>
+                                        <button class="btn btn-primary px-5 mb-3"
+                                            onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -63,7 +67,8 @@
                                         <img class="img-fluid" src="./images/ramos.jpg" alt="">
                                         <p>102 Goals || 122 Assist</p>
                                         <h5>Sergio Ramos</h5>
-                                        <button class="btn btn-primary px-5 mb-3 ">Select</button>
+                                        <button class="btn btn-primary px-5 mb-3"
+                                            onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -71,7 +76,8 @@
                                         <img class="img-fluid" src="./images/salah.jpg" alt="">
                                         <p>112 Goals || 182 Assist</p>
                                         <h5>Mohamed Salah</h5>
-                                        <button class="btn btn-primary px-5 mb-3 ">Select</button>
+                                        <button class="btn btn-primary px-5 mb-3"
+                                            onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
                             </div>
@@ -79,22 +85,18 @@
                     </div>
                     <div class="col-3 container">
                         <div class="border pt-5 px-3 mb-2">
-                            <h5 class="text-center">Selected-V</h5>
+                            <h5 class="text-center">Selected-<span id="selected">V</span></h5>
                             <hr>
-                            <ol>
-                                <li class="my-2"><span id="selected-1"></span></li>
-                                <li class="my-2"><span id="selected-2"></span></li>
-                                <li class="my-2"><span id="selected-3"></span></li>
-                                <li class="my-2"><span id="selected-4"></span></li>
-                                <li class="my-2"> <span id="selected-5"></span></li>
+                            <ol id="player-cart">
+
                             </ol>
                         </div>
                         <div class="border pt-5 px-3">
                             <h5 class="text-center">Budget</h5>
                             <hr>
-                            <p>per player<input type="text"></p>
-                            <button class="btn btn-primary px-5 mb-3">Calculate</button>
-                            <p>Player Expenses <span>$5000</span></p>
+                            <p>per player<input type="text" id="per-head-budget"></p>
+                            <button class="btn btn-primary px-5 mb-3" onclick="playerCalculation()">Calculate</button>
+                            <p>Player Expenses <span id="player-expense">$5000</span></p>
                             <p>Manager<input type="text"></p>
                             <p>Coach<input type="text"></p>
                             <button class="btn btn-primary px-5 mb-3">Calculate</button>

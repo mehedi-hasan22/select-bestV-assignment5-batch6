@@ -96,11 +96,12 @@
                             <hr>
                             <p>per player<input type="text" id="per-head-budget"></p>
                             <button class="btn btn-primary px-5 mb-3" onclick="calculation()">Calculate</button>
-                            <p>Player Expenses $<span id="player-expense">00</span></p>
-                            <p>Manager<input type="text"></p>
-                            <p>Coach<input type="text"></p>
-                            <button class="btn btn-primary px-5 mb-3">Calculate</button>
-                            <p>Total Expense $<span>00</span></p>
+                            <p>Player Expenses $<span class="text-primary" id="player-expense">00</span></p>
+                            <p>Manager<input type="text" id="manager"></p>
+                            <p>Coach<input type="text" id="coach"></p>
+                            <button class="btn btn-primary px-5 mb-3" onclick="totalCalculation()">Calculate
+                                Total</button>
+                            <p>Total Expense $<span class="text-primary fs-3" id="subtotal">00</span></p>
                         </div>
                     </div>
                 </div>

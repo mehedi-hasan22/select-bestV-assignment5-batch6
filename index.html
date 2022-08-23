@@ -4,18 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Select Five</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <title>Make Squad</title>
+    <!-- bootsrap Style -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body>
     <header>
-        <section class="d-flex justify-content-center text-center my-5 bg-secondary container p-5">
+        <section class="d-flex justify-content-center text-center my-5 bg-primary text-white rounded container p-5">
             <div>
-                <h1 class="heading mb-5">Select Your Best Five</h1>
-                <p class="text-white">Make your powerful squad, select player for greatest show of Earth.</p>
+                <h1 class="heading mb-5">Make Your Penta Squad!!!</h1>
+                <p class="text-dark">Make your powerful squad, select player for greatest show of Earth.</p>
             </div>
         </section>
     </header>
@@ -26,6 +26,7 @@
                     <div class="col-9">
                         <div class="container text-center">
                             <div class="row g-2">
+                                <!-- player card 1 -->
                                 <div class="col-4">
                                     <div class="border bg-light">
                                         <img class="img-fluid" src="./images/benzu.jpg" alt="">
@@ -35,6 +36,7 @@
                                             onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
+                                <!-- player card 2 -->
                                 <div class="col-4">
                                     <div class="border bg-light">
                                         <img class="img-fluid" src="./images/cr7.jpg" alt="">
@@ -44,6 +46,7 @@
                                             onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
+                                <!-- player card 3 -->
                                 <div class="col-4">
                                     <div class="border bg-light">
                                         <img class="img-fluid" src="./images/david.jpg" alt="">
@@ -53,6 +56,7 @@
                                             onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
+                                <!-- player card 4 -->
                                 <div class="col-4">
                                     <div class="border bg-light">
                                         <img class="img-fluid" src="./images/mbappe.jpeg" alt="">
@@ -62,6 +66,7 @@
                                             onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
+                                <!-- player card 5 -->
                                 <div class="col-4">
                                     <div class="border bg-light">
                                         <img class="img-fluid" src="./images/ramos.jpg" alt="">
@@ -71,6 +76,7 @@
                                             onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
+                                <!-- player card 6 -->
                                 <div class="col-4">
                                     <div class="border bg-light">
                                         <img class="img-fluid" src="./images/salah.jpg" alt="">
@@ -80,26 +86,61 @@
                                             onclick="addToCart(this)">Select</button>
                                     </div>
                                 </div>
+                                <!-- player card 7 -->
+                                <div class="col-4">
+                                    <div class="border bg-light">
+                                        <img class="img-fluid" src="./images/pogba.jpg" alt="">
+                                        <p>56 Goals || 112 Assist</p>
+                                        <h5>Paul Pogba</h5>
+                                        <button class="btn btn-primary px-5 mb-3"
+                                            onclick="addToCart(this)">Select</button>
+                                    </div>
+                                </div>
+                                <!-- player card 8 -->
+                                <div class="col-4">
+                                    <div class="border bg-light">
+                                        <img class="img-fluid w-auto h-40" src="./images/Sunday.jpg" alt="">
+                                        <p>12 Goals || 32 Assist</p>
+                                        <h5>sunday chizoba</h5>
+                                        <button class="btn btn-primary px-5 mb-3"
+                                            onclick="addToCart(this)">Select</button>
+                                    </div>
+                                </div>
+                                <!-- player card 9 -->
+                                <div class="col-4">
+                                    <div class="border bg-light">
+                                        <img class="img-fluid" src="./images/jamal.jpg" alt="">
+                                        <p>62 Goals || 82 Assist</p>
+                                        <h5>Jamal Bhuiyan</h5>
+                                        <button class="btn btn-primary px-5 mb-3"
+                                            onclick="addToCart(this)">Select</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- selected player ordered list -->
+
                     <div class="col-3 container">
                         <div class="border pt-5 px-3 mb-2">
                             <h5 class="text-center">Selected-<span id="selected">V</span></h5>
                             <hr>
+                            <!-- empty ol, DOM will creat list -->
                             <ol id="player-cart">
 
                             </ol>
                         </div>
+                        <!-- budget, expense input & buttons -->
                         <div class="border pt-5 px-3">
                             <h5 class="text-center">Budget</h5>
                             <hr>
                             <p>per player<input type="text" id="per-head-budget"></p>
-                            <button class="btn btn-primary px-5 mb-3" onclick="calculation()">Calculate</button>
+                            <button class="btn btn-primary px-5 mb-3" id="calculate">Calculate</button>
                             <p>Player Expenses $<span class="text-primary" id="player-expense">00</span></p>
                             <p>Manager<input type="text" id="manager"></p>
                             <p>Coach<input type="text" id="coach"></p>
-                            <button class="btn btn-primary px-5 mb-3" onclick="totalCalculation()">Calculate
+                            <button class="btn btn-primary px-5 mb-3" id="total-calculate">Calculate
                                 Total</button>
                             <p>Total Expense $<span class="text-primary fs-3" id="subtotal">00</span></p>
                         </div>
@@ -108,11 +149,16 @@
             </div>
         </section>
     </main>
+
+    <!-- a simple footer -->
     <footer class="container text-center">
         <hr>
         <p>Copyright @ 2022 All Rights Reserved.</p>
     </footer>
+
+    <!-- Custom JavaScript -->
     <script src="./js/script.js"></script>
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
